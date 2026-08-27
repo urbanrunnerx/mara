@@ -5,6 +5,7 @@
   var KEY_LAST = "mara.lastOpen";
   var KEY_ROT = "mara.rot";
   var KEY_HINT = "mara.homeHint";
+  var KEY_VISITS = "mara.visits";
 
   var MIN = 60 * 1000;
   var HOUR = 60 * MIN;
@@ -248,6 +249,21 @@
     } catch (e) {}
   }
 
+  function readVisits() {
+    try {
+      var n = parseInt(localStorage.getItem(KEY_VISITS) || "0", 10);
+      return isFinite(n) && n > 0 ? n : 0;
+    } catch (e) {
+      return 0;
+    }
+  }
+
+  function writeVisits(n) {
+    try {
+      localStorage.setItem(KEY_VISITS, String(n));
+    } catch (e) {}
+  }
+
   function isStandalone() {
     if (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) return true;
     if (navigator.standalone) return true;
@@ -274,20 +290,26 @@
   var beat = peeked.beat;
 
   var visitCounted = false;
+  var visitN = readVisits();
   function countVisit() {
     if (visitCounted) return;
     visitCounted = true;
     writeLast(now);
     advanceRot(bucket, peeked.i, peeked.n);
+    visitN = readVisits() + 1;
+    writeVisits(visitN);
   }
 
   stage.classList.add("temp-" + bucket);
   lineEl.textContent = beat.line;
   beatEl.textContent = beat.beat;
-  replyEl.textContent = beat.reply;
-  settleEl.textContent = beat.settle;
+  replyEl.textContent = "";
+  settleEl.textContent = "";
+  replyEl.hidden = true;
+  settleEl.hidden = true;
   lingerEl.textContent = beat.linger;
   lingerEl.hidden = false;
+  lingerEl.disabled = false;
 
   function lightRoom() {
     stage.classList.add("lit");
@@ -295,6 +317,7 @@
   function showKnock() {
     knock.classList.remove("entering");
     knock.classList.add("ready");
+    /* Presence after the knock is shown. Refresh is not a visit. */
     window.setTimeout(countVisit, 2000);
   }
 
@@ -302,20 +325,24 @@
     lightRoom();
     showKnock();
   } else {
-    window.setTimeout(lightRoom, 180);
-    window.setTimeout(showKnock, 1100);
+    window.setTimeout(lightRoom, 50);
+    window.setTimeout(showKnock, 160);
   }
 
   lingerEl.addEventListener("click", function () {
+    if (lingerEl.disabled) return;
     countVisit();
     lingerEl.hidden = true;
     lingerEl.disabled = true;
     knock.classList.add("lingered");
+    replyEl.textContent = beat.reply;
+    settleEl.textContent = beat.settle;
     replyEl.hidden = false;
     settleEl.hidden = false;
     var shownHint = false;
     try { shownHint = localStorage.getItem(KEY_HINT) === "1"; } catch (e) {}
-    if (!shownHint && !isStandalone()) {
+    /* Never the first closer. Counted visits 2 or 3 only. */
+    if (!shownHint && !isStandalone() && (visitN === 2 || visitN === 3)) {
       hintEl.hidden = false;
       hintEl.textContent = "On a phone: Share → Add to Home Screen. Then I’m just a knock.";
       try { localStorage.setItem(KEY_HINT, "1"); } catch (e) {}

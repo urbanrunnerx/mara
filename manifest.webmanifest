@@ -1,0 +1,19 @@
+{
+  "name": "Mara",
+  "short_name": "Mara",
+  "description": "A knock. She has a beat waiting, depending on how long you were gone.",
+  "display": "standalone",
+  "start_url": ".",
+  "scope": ".",
+  "orientation": "portrait",
+  "theme_color": "#140e18",
+  "background_color": "#140e18",
+  "icons": [
+    {
+      "src": "icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

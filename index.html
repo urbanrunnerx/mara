@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#140e18" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Mara" />
+  <meta name="description" content="A knock. She’s been in the apartment the whole time." />
+  <title>Mara</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon-180.png" />
+  <link rel="icon" href="icon-180.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,14..144,400;0,14..144,560;1,14..144,400;1,14..144,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="frame">
+    <div id="stage">
+      <div class="sky" aria-hidden="true"></div>
+      <div class="window" aria-hidden="true">
+        <div class="moon"></div>
+        <div class="city">
+          <span class="bld b1"></span>
+          <span class="bld b2"></span>
+          <span class="bld b3"></span>
+          <span class="bld b4"></span>
+          <span class="bld b5"></span>
+        </div>
+        <div class="sash"></div>
+      </div>
+      <div class="curtain" aria-hidden="true"></div>
+      <div class="lamp" aria-hidden="true">
+        <div class="shade"></div>
+        <div class="stem"></div>
+        <div class="base"></div>
+        <div class="glow"></div>
+      </div>
+      <svg class="figure" viewBox="0 0 220 280" aria-hidden="true">
+        <!-- stylized adult, back-three-quarter: no face, no one real -->
+        <ellipse cx="118" cy="268" rx="46" ry="8" fill="#0c0810" opacity=".45"/>
+        <path fill="#2a1c28" d="M78 168c8-22 28-38 52-40 18-2 34 8 42 24 6 14 8 38 4 62l-8 46h-28l-6-40c-2-12-8-18-16-16-10 2-16 16-18 32l-4 24H78l0-92z"/>
+        <path fill="#3a2836" d="M92 158c4-18 22-32 42-30 16 2 28 16 30 32-10-8-22-12-36-10-16 2-28 10-36 8z"/>
+        <path fill="#1e141c" d="M124 86c18 2 32 16 34 34 2 12-2 22-10 30-6 4-8 2-8-4 0-10-4-16-12-18-10-2-18 6-22 16-2 6-6 6-8 0-4-14 2-32 16-44 6-6 8-14 10-14z"/>
+        <path fill="#4a3438" d="M108 112c8-18 28-26 44-16 8 6 12 16 10 26-8-10-20-14-32-10-10 4-16 12-22 0z"/>
+        <path fill="#c4786a" d="M138 118c6 2 8 10 4 16-2 4-6 6-8 4-4-2-4-10 0-16 2-2 2-4 4-4z"/>
+        <path fill="#2a1c28" d="M86 176c-10 8-18 22-22 36-2 8 4 10 10 6 8-6 16-18 20-30 2-6-2-14-8-12z"/>
+      </svg>
+      <div class="sill" aria-hidden="true">
+        <div class="cup"></div>
+      </div>
+
+      <main id="knock" class="entering">
+        <p class="who">Mara</p>
+        <p class="line" id="line"></p>
+        <p class="beat" id="beat"></p>
+        <p class="reply" id="reply" hidden></p>
+        <button type="button" class="linger" id="linger" hidden></button>
+        <p class="home-hint" id="home-hint" hidden></p>
+      </main>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

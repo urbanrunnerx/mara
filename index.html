@@ -46,81 +46,246 @@
         <div class="glow"></div>
       </div>
 
-      <!-- Adult woman, back-three-quarter. No face. Lamp rim. Knee on sill. -->
-      <svg class="figure" viewBox="0 0 240 320" aria-hidden="true">
-        <ellipse cx="128" cy="310" rx="56" ry="8" fill="#0a060c" opacity=".45"/>
+      <!-- stylized adult, no face — back 3/4, waist-to-hip, knee on sill, lamp rim -->
+      <svg class="figure" viewBox="0 0 240 340" aria-hidden="true">
+        <defs>
+          <linearGradient id="skinShade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#f2d2c0"/>
+            <stop offset="28%" stop-color="#c8947c"/>
+            <stop offset="62%" stop-color="#7a4a42"/>
+            <stop offset="100%" stop-color="#2a1618"/>
+          </linearGradient>
+          <linearGradient id="skinHot" x1="0" y1="0" x2="1" y2="0.4">
+            <stop offset="0%" stop-color="#f8e0d0"/>
+            <stop offset="45%" stop-color="#d4a090"/>
+            <stop offset="100%" stop-color="#8a5850"/>
+          </linearGradient>
+          <linearGradient id="clothShade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#5a3844"/>
+            <stop offset="40%" stop-color="#24141c"/>
+            <stop offset="100%" stop-color="#0c080c"/>
+          </linearGradient>
+          <linearGradient id="hairShade" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3a281e"/>
+            <stop offset="40%" stop-color="#160e0e"/>
+            <stop offset="100%" stop-color="#080406"/>
+          </linearGradient>
+        </defs>
 
-        <g class="pose pose-here" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <!-- sill she's sitting on -->
-          <rect x="48" y="246" width="180" height="12" rx="2" fill="#3a2c32" stroke="none"/>
-          <!-- hips wider than waist -->
-          <ellipse cx="128" cy="214" rx="40" ry="22" fill="#241820" stroke="none"/>
-          <!-- torso, waist pinched -->
-          <path d="M108 116 C 96 140 98 168 114 196 C 142 194 164 168 162 132 C 158 110 130 102 108 116Z"
-                fill="#2c1c24" stroke="none"/>
-          <path d="M132 108 C 124 150 128 180 134 206" stroke="#1a1018" stroke-width="6"/>
-          <!-- near shoulder (lamp) larger -->
-          <path d="M78 124 L 158 128" stroke="#d4a090" stroke-width="15"/>
-          <path d="M78 124 C 62 156 58 188 78 214" stroke="#e0b0a0" stroke-width="12"/>
-          <path d="M158 128 C 168 152 164 176 150 192" stroke="#6a4038" stroke-width="10"/>
-          <!-- thigh to raised knee on sill -->
-          <path d="M150 206 C 178 176 206 168 218 186" stroke="#d4a090" stroke-width="16"/>
-          <path d="M218 186 C 226 210 220 238 204 246" stroke="#c49080" stroke-width="13"/>
-          <!-- seated lower leg (short, on sill) -->
-          <path d="M106 222 C 98 236 96 246 104 246" stroke="#8a6058" stroke-width="14"/>
-          <path d="M128 96 L 132 110" stroke="#3a2828" stroke-width="6"/>
-          <!-- long hair down the back, covers head, no face -->
-          <path d="M112 48 C 94 56 90 80 102 100 C 112 112 130 112 142 102
-                   C 140 84 152 70 170 68 C 186 66 196 82 190 98
-                   C 186 112 176 124 168 140 C 160 158 154 176 152 188
-                   C 170 120 188 90 176 60 C 164 40 132 36 112 48Z"
-                fill="#120a0c" stroke="none"/>
-          <path d="M78 118 C 70 128 66 144 68 160" stroke="#f6d4c4" stroke-width="5"/>
+        <ellipse class="fig-shadow" cx="124" cy="328" rx="52" ry="8" fill="#0c0810" opacity=".4"/>
+
+        <!-- first / minutes: sitting the sill, back-three-quarter, one knee up -->
+        <g class="pose pose-here">
+          <!-- wooden sill she sits on -->
+          <path fill="#3a2826" d="M22 206 H216 Q222 206 222 212 V220 Q222 226 216 226 H22 Q16 226 16 220 V212 Q16 206 22 206Z"/>
+          <path fill="#2a1c1c" d="M16 220 H222 V226 Q222 230 216 230 H22 Q16 230 16 224Z"/>
+
+          <!-- hanging far leg -->
+          <path fill="url(#skinShade)" d="M136 214
+            C146 250 152 292 146 326
+            C144 336 132 336 130 326
+            C132 294 128 254 124 222
+            C122 214 130 208 136 214Z"/>
+
+          <!-- raised near leg: thigh hip → knee -->
+          <path fill="url(#skinHot)" d="M96 208
+            C82 186 58 164 40 150
+            C30 142 22 150 28 160
+            C44 180 68 202 86 220
+            C92 226 102 222 96 208Z"/>
+          <!-- calf knee → foot on sill -->
+          <path fill="url(#skinShade)" d="M36 152
+            C28 176 44 200 76 212
+            C86 216 92 206 84 200
+            C62 186 46 170 40 156
+            C38 152 36 150 36 152Z"/>
+          <ellipse cx="38" cy="148" rx="13" ry="11" fill="url(#skinHot)"/>
+          <!-- foot on the board -->
+          <path fill="#c09080" d="M72 208 C84 206 96 214 94 222 C86 226 70 224 66 218 C64 214 66 210 72 208Z"/>
+
+          <!-- hips / shorts — waist-to-hip flare -->
+          <path fill="url(#clothShade)" d="M76 186
+            C68 196 66 212 78 224
+            C94 236 132 240 160 228
+            C174 220 178 206 168 194
+            C156 180 128 174 100 176
+            C88 178 80 180 76 186Z"/>
+
+          <!-- torso: shoulders wide, waist in -->
+          <path fill="url(#skinShade)" d="M94 116
+            C80 130 76 152 84 174
+            C90 188 108 196 128 194
+            C150 192 166 176 170 152
+            C174 128 162 110 144 106
+            C126 102 106 106 94 116Z"/>
+
+          <!-- lamp-side chest/shoulder rim, thin, not a face oval -->
+          <path fill="#f8e4d4" opacity=".45" d="M92 124
+            C84 132 78 146 80 160
+            C88 148 98 134 110 126
+            C108 122 98 120 92 124Z"/>
+
+          <!-- near arm, rim-lit, resting toward the raised knee -->
+          <path fill="url(#skinHot)" d="M88 122
+            C70 136 52 160 50 184
+            C48 198 60 204 68 194
+            C76 174 86 150 96 134
+            C100 126 94 120 88 122Z"/>
+
+          <!-- far arm in shadow -->
+          <path fill="url(#skinShade)" d="M162 126
+            C176 146 178 172 168 192
+            C162 202 150 198 148 186
+            C152 166 154 146 152 132
+            C150 124 158 122 162 126Z"/>
+
+          <!-- neck, in shadow under hair -->
+          <path fill="#4a3030" d="M122 102
+            C120 110 122 118 128 122
+            C134 124 140 120 140 112
+            C140 106 136 100 130 98
+            C126 98 123 100 122 102Z"/>
+
+          <!-- hair covers the whole head. no face oval. falls down the far shoulder -->
+          <path fill="url(#hairShade)" d="M100 58
+            C94 34 118 18 148 20
+            C178 22 198 46 196 74
+            C194 96 176 112 154 116
+            C148 118 142 114 140 108
+            C152 96 156 72 144 58
+            C132 46 112 50 106 64
+            C104 68 102 62 100 58Z"/>
+          <path fill="url(#hairShade)" d="M152 108
+            C166 128 172 162 162 196
+            C156 188 150 150 148 124
+            C146 112 148 106 152 108Z"/>
+
+          <!-- lamp rim on near shoulder + hip -->
+          <path fill="#f8e4d4" opacity=".55" d="M90 118
+            C78 128 70 144 68 160
+            C74 148 84 132 96 122
+            C98 120 94 116 90 118Z"/>
         </g>
 
-        <g class="pose pose-hours" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <ellipse cx="128" cy="200" rx="28" ry="18" fill="#241820" stroke="none"/>
-          <path d="M104 120 C 96 150 104 176 120 190 C 144 188 160 164 162 132 C 158 114 126 108 104 120Z"
-                fill="#3a2430" stroke="none"/>
-          <path d="M90 118 L 172 122" stroke="#3a2430" stroke-width="22"/>
-          <path d="M128 108 C 124 148 126 186 130 230" stroke="#1a1018" stroke-width="8"/>
-          <path d="M90 118 C 76 150 78 190 96 220" stroke="#d4a090" stroke-width="11"/>
-          <path d="M172 122 C 186 160 180 210 168 250" stroke="#8a6058" stroke-width="11"/>
-          <path d="M114 212 C 108 250 110 286 118 304" stroke="#8a6058" stroke-width="14"/>
-          <path d="M144 210 C 150 250 148 286 140 304" stroke="#6a4840" stroke-width="14"/>
-          <path d="M128 96 L 132 112" stroke="#c49080" stroke-width="8"/>
-          <path d="M116 50 C 100 56 96 78 106 96 C 116 108 134 110 146 100 C 144 84 154 70 170 70 C 184 70 192 86 186 100 C 198 88 196 62 180 50 C 164 38 130 38 116 50Z"
-                fill="#140c0c" stroke="none"/>
-          <path d="M90 114 C 82 124 78 140 80 154" stroke="#f6d4c4" stroke-width="4"/>
+        <!-- hours: upright, she did something -->
+        <g class="pose pose-hours">
+          <path fill="url(#skinShade)" d="M108 210
+            C100 248 98 286 104 322
+            C106 332 118 332 120 322
+            C122 286 124 248 126 214
+            C128 206 114 204 108 210Z"/>
+          <path fill="url(#skinShade)" d="M140 210
+            C148 248 150 286 144 322
+            C142 332 130 332 128 322
+            C128 286 130 248 132 214
+            C134 206 136 204 140 210Z"/>
+          <path fill="url(#clothShade)" d="M88 154
+            C78 172 80 200 92 226
+            C102 244 122 254 144 250
+            C162 246 172 228 174 208
+            C176 186 166 164 150 154
+            C132 142 104 142 90 152
+            C88 153 88 154 88 154Z"/>
+          <path fill="url(#skinShade)" d="M96 108
+            C84 122 82 146 92 168
+            C102 186 124 192 144 180
+            C158 170 164 150 158 130
+            C150 108 124 98 96 108Z"/>
+          <path fill="url(#skinHot)" d="M92 118
+            C78 126 64 144 62 164
+            C60 176 72 182 80 172
+            C88 156 96 136 104 124
+            C106 120 98 116 92 118Z"/>
+          <path fill="url(#skinShade)" d="M118 72
+            C110 86 112 102 124 110
+            C136 118 150 110 154 94
+            C158 78 148 60 132 58
+            C124 56 120 62 118 72Z"/>
+          <path fill="url(#hairShade)" d="M110 70
+            C104 48 122 32 144 32
+            C166 32 182 50 180 72
+            C178 90 164 102 148 102
+            C160 84 156 62 142 54
+            C128 48 114 56 110 70Z"/>
+          <path fill="#f8e4d4" opacity=".5" d="M92 114 C82 124 76 140 76 154 C84 140 94 126 104 118Z"/>
         </g>
 
-        <g class="pose pose-overnight" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <ellipse cx="150" cy="220" rx="70" ry="22" fill="#241820" stroke="none"/>
-          <path d="M80 150 C 70 170 90 200 140 210 C 190 218 220 200 210 176 C 198 150 130 140 80 150Z"
-                fill="#2a1c24" stroke="none"/>
-          <path d="M90 148 C 120 140 170 148 200 168" stroke="#1a1018" stroke-width="8"/>
-          <path d="M200 168 C 220 176 230 200 216 220" stroke="#8a6058" stroke-width="13"/>
-          <path d="M70 160 C 50 170 44 196 66 210" stroke="#d4a090" stroke-width="11"/>
-          <path d="M100 140 L 118 154" stroke="#c49080" stroke-width="8"/>
-          <path d="M88 96 C 72 102 68 124 80 140 C 92 150 112 148 120 136 C 116 122 124 108 140 106 C 154 104 162 116 158 128 C 170 116 166 92 150 84 C 134 76 102 80 88 96Z"
-                fill="#140c0c" stroke="none"/>
-          <path d="M176 214 C 198 210 226 222 230 240" stroke="#2a2834" stroke-width="10"/>
-          <path d="M80 148 C 72 156 68 168 70 180" stroke="#c8d0d8" stroke-width="3"/>
+        <!-- overnight: leftover night, reclined, hip still reads -->
+        <g class="pose pose-overnight">
+          <path fill="#3a2826" d="M18 228 H226 Q232 228 232 234 V242 Q232 248 226 248 H18 Q12 248 12 242 V234 Q12 228 18 228Z"/>
+          <path fill="url(#clothShade)" d="M40 200
+            C52 184 96 174 140 180
+            C180 186 214 204 220 226
+            C224 240 210 254 180 258
+            C140 264 88 258 58 246
+            C40 238 32 218 40 200Z"/>
+          <path fill="url(#skinShade)" d="M58 192
+            C50 164 68 138 98 130
+            C124 124 148 136 156 160
+            C162 178 152 196 132 204
+            C104 214 72 210 58 192Z"/>
+          <path fill="url(#skinHot)" d="M96 140
+            C110 130 132 136 140 154
+            C130 152 114 146 102 148
+            C98 148 96 144 96 140Z"/>
+          <path fill="url(#skinShade)" d="M108 104
+            C100 118 104 136 118 144
+            C132 152 148 142 150 124
+            C152 106 140 90 124 90
+            C116 90 110 96 108 104Z"/>
+          <path fill="url(#hairShade)" d="M100 100
+            C90 78 110 58 134 56
+            C158 54 176 74 172 96
+            C170 114 152 124 136 120
+            C148 102 144 82 130 76
+            C116 70 102 82 100 100Z"/>
+          <path fill="url(#skinShade)" d="M190 214
+            C210 206 228 218 226 238
+            C214 244 196 238 186 228
+            C180 222 182 216 190 214Z"/>
         </g>
 
-        <g class="pose pose-days" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <ellipse cx="130" cy="206" rx="30" ry="18" fill="#241820" stroke="none"/>
-          <path d="M106 122 C 98 152 108 178 124 194 C 148 192 164 168 164 136 C 160 116 128 110 106 122Z"
-                fill="#2a1c24" stroke="none"/>
-          <path d="M94 124 L 168 128" stroke="#d4a090" stroke-width="12"/>
-          <path d="M94 124 C 78 150 80 186 100 214" stroke="#d4a090" stroke-width="11"/>
-          <path d="M168 128 C 180 160 176 198 160 230" stroke="#8a6058" stroke-width="10"/>
-          <path d="M116 214 C 110 250 112 286 120 304" stroke="#8a6058" stroke-width="14"/>
-          <path d="M146 212 C 152 250 150 286 142 304" stroke="#6a4840" stroke-width="14"/>
-          <path d="M130 98 L 134 114" stroke="#c49080" stroke-width="8"/>
-          <path d="M120 52 C 104 58 100 80 110 98 C 120 110 138 112 150 102 C 148 86 158 72 174 72 C 188 72 196 88 190 102 C 202 90 200 64 184 52 C 168 40 134 40 120 52Z"
-                fill="#140c0c" stroke="none"/>
-          <path d="M94 120 C 86 130 82 146 84 160" stroke="#f6d4c4" stroke-width="4"/>
+        <!-- days: sitting, life continued -->
+        <g class="pose pose-days">
+          <path fill="url(#skinShade)" d="M102 214
+            C94 250 94 288 100 322
+            C102 332 114 332 116 322
+            C118 286 120 250 122 216
+            C124 208 108 206 102 214Z"/>
+          <path fill="url(#skinShade)" d="M144 212
+            C152 250 154 288 148 322
+            C146 332 134 332 132 322
+            C132 286 134 250 136 216
+            C138 208 140 206 144 212Z"/>
+          <path fill="url(#clothShade)" d="M90 156
+            C80 174 82 202 94 228
+            C104 246 124 256 146 252
+            C164 248 174 230 176 210
+            C178 188 168 166 152 156
+            C134 144 106 144 92 154
+            C90 155 90 156 90 156Z"/>
+          <path fill="url(#skinShade)" d="M100 110
+            C88 124 88 148 98 168
+            C108 186 132 190 150 176
+            C162 166 166 146 158 128
+            C148 108 122 100 100 110Z"/>
+          <path fill="url(#skinHot)" d="M96 120
+            C82 128 68 146 66 166
+            C64 176 76 182 84 172
+            C92 156 100 136 108 124
+            C110 120 102 118 96 120Z"/>
+          <path fill="url(#skinShade)" d="M120 76
+            C112 90 114 106 126 114
+            C138 122 152 114 156 98
+            C160 82 150 64 134 62
+            C126 60 122 66 120 76Z"/>
+          <path fill="url(#hairShade)" d="M112 74
+            C106 52 124 36 146 36
+            C168 36 184 54 182 76
+            C180 94 166 106 150 106
+            C162 88 158 66 144 58
+            C130 52 116 60 112 74Z"/>
+          <path fill="#f8e4d4" opacity=".5" d="M96 116 C86 126 80 142 80 156 C88 142 98 128 108 120Z"/>
         </g>
       </svg>
 

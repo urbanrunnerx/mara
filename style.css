@@ -242,6 +242,7 @@ body {
 
 .figure {
   position: absolute;
+  overflow: visible;
   right: 4%;
   bottom: 28%;
   width: min(52%, 230px);
@@ -256,7 +257,7 @@ body {
   0%, 100% { transform: translateY(0) scale(1); }
   50% { transform: translateY(-2.5px) scale(1.012); }
 }
-#stage.lit .figure {
+#stage.lingered .figure {
   animation: breathe 4.8s ease-in-out infinite;
 }
 .pose { display: none; }
@@ -407,19 +408,19 @@ body {
 #knock {
   position: absolute;
   left: 0; right: 0;
-  top: 42%;
+  top: 36%;
   bottom: 0;
   z-index: 3;
   padding:
-    8px
+    4px
     max(22px, calc(var(--safe-r) + 22px))
     max(22px, calc(var(--safe-b) + 16px))
     max(22px, calc(var(--safe-l) + 22px));
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 8px;
-  background: linear-gradient(180deg, transparent, rgba(16, 10, 18, 0.55) 16%, rgba(16, 10, 18, 0.94) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(16, 10, 18, 0.28) 8%, rgba(16, 10, 18, 0.82) 42%, rgba(16, 10, 18, 0.96) 100%);
 }
 
 .who {
@@ -652,7 +653,11 @@ body {
 }
 #knock.ready .line {
   opacity: 1;
-  transition: opacity 0.28s ease;
+  animation: knock-write 0.46s ease both;
+}
+@keyframes knock-write {
+  from { clip-path: inset(0 62% 0 0); opacity: 0.45; }
+  to { clip-path: inset(0 0 0 0); opacity: 1; }
 }
 #knock.ready .beat {
   opacity: 1;
@@ -681,7 +686,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .city { animation: none; }
-  #stage.lit .figure { animation: none; }
+  #stage.lingered .figure { animation: none; }
+  #knock.ready .line { animation: none; }
   #stage.lit .sky,
   #stage.lit .window,
   #stage.lit .curtain,

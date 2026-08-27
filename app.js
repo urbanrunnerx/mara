@@ -335,6 +335,7 @@
     lingerEl.hidden = true;
     lingerEl.disabled = true;
     knock.classList.add("lingered");
+    stage.classList.add("lingered");
     replyEl.textContent = beat.reply;
     settleEl.textContent = beat.settle;
     replyEl.hidden = false;

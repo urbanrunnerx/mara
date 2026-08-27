@@ -484,7 +484,7 @@ body {
 .linger {
   appearance: none;
   -webkit-appearance: none;
-  margin-top: 8px;
+  margin-top: auto;
   align-self: stretch;
   min-height: 48px;
   padding: 14px 22px;
@@ -653,11 +653,11 @@ body {
 }
 #knock.ready .line {
   opacity: 1;
-  animation: knock-write 0.46s ease both;
+  animation: knock-write 0.42s ease;
 }
 @keyframes knock-write {
-  from { clip-path: inset(0 62% 0 0); opacity: 0.45; }
-  to { clip-path: inset(0 0 0 0); opacity: 1; }
+  0% { clip-path: inset(0 58% 0 0); opacity: 0.5; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; }
 }
 #knock.ready .beat {
   opacity: 1;

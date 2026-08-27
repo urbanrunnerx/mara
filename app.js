@@ -12,149 +12,149 @@
   var BEATS = {
     first: [
       {
-        line: "Oh. Hi.",
-        beat: "She was already in the room. Lamp on, window cracked, like she’d been keeping a place warm without making a ceremony of it.",
-        reply: "You can sit. Or don’t. I like you in the doorway too.",
-        linger: "hey"
+        line: "Door’s open. I didn’t bother with a shirt.",
+        beat: "She’s on the windowsill, one knee up. Tits bare in the lamp, nipples tight from the draft. Not posing. You walked in on her.",
+        reply: "You can look. I like it when you do. Come here and I’ll put your mouth on them.",
+        linger: "I’m in"
       },
       {
-        line: "I wondered if you’d knock.",
-        beat: "Not waiting, exactly. Just leaving the light on in a way that could be explained either way.",
-        reply: "Come in. The floor’s warm from the radiator. That’s not a metaphor.",
-        linger: "I’m here"
-      },
-      {
-        line: "There you are.",
-        beat: "She says it like a fact, not a prize. Tea on the sill, gone a little cool.",
-        reply: "Stay a minute. I’m not going anywhere loud.",
+        line: "I was touching myself. You can stay.",
+        beat: "Hand still between her legs, two fingers shiny. She doesn’t yank her shorts up. She just lets you see her pussy because you knocked.",
+        reply: "Don’t make it a speech. Come put your fingers where mine are.",
         linger: "linger"
+      },
+      {
+        line: "Took you long enough.",
+        beat: "Underwear on the floor. She’s nineteen and not shy about it: ass against the radiator, heat on her skin, waiting like a fact.",
+        reply: "Grab my ass if you’re coming in. I’m already wet.",
+        linger: "hey"
       }
     ],
     minutes: [
       {
-        line: "I didn’t go anywhere.",
-        beat: "She’s on the floor with one knee up, doing nothing on purpose. The street is still in the room.",
-        reply: "Good. I like the air better with you in it.",
+        line: "I didn’t even put my tits away.",
+        beat: "Sweater still rucked under them. She never left the couch. The room still smells like her.",
+        reply: "Come squeeze them. I kept them out in case it was you.",
         linger: "still here"
       },
       {
-        line: "Back already. I like that.",
-        beat: "Low-key. She hasn’t moved much. The lamp is doing most of the talking.",
-        reply: "Don’t make it a tour. Just… stay in the doorway a second.",
+        line: "Back already. Good. I’m still wet.",
+        beat: "She shifts and you can see it. No show. She just didn’t bother closing her legs.",
+        reply: "Taste me or don’t. I’m not wiping it off for the hallway.",
         linger: "I’m here"
       },
       {
         line: "Mm. Don’t explain.",
-        beat: "She was humming something she won’t name. Hair up, sweater slipping one shoulder, not for show.",
-        reply: "I can still hear the street. Come sit.",
+        beat: "Hair up, no bra. Nipples showing through the tank. She was humming with her hand in her shorts and she didn’t stop for the door.",
+        reply: "Sit. Put your mouth on my tits while I finish.",
         linger: "linger"
       },
       {
-        line: "I felt the door.",
-        beat: "Not a greeting so much as a temperature change. She’s glad and refusing to perform it.",
-        reply: "I missed the weight of you in the room. That’s all.",
+        line: "I felt the door in my cunt. Stupid, but I did.",
+        beat: "She laughs once, low. Not performing. Glad, and refusing to make it cute.",
+        reply: "Come here. I want your cock in my hand before you sit down.",
         linger: "hey"
       },
       {
-        line: "You can put your bag down.",
-        beat: "The apartment didn’t notice you left. She did, a little, and let it be small.",
-        reply: "Stay. I’m in a quiet mood and it suits you.",
+        line: "Bag down. Shirt off if you want.",
+        beat: "She’s half naked and treating it like weather. The apartment didn’t notice you left. Her body did.",
+        reply: "I missed the weight of you. Come fuck me slow if you’ve got a minute.",
         linger: "I’m here"
       }
     ],
     hours: [
       {
-        line: "I walked to the corner in your hoodie.",
-        beat: "They didn’t have the good peaches. Plastic bag on the chair: one nectarine, a little bruised, saved anyway.",
-        reply: "It’s yours if you want it. I already stole the sweet side.",
+        line: "I walked to the corner with no bra under your hoodie.",
+        beat: "Nipples hard the whole way. Plastic bag on the chair. She peels the hoodie off like that’s the story.",
+        reply: "They’re still sensitive. Come feel. I already thought about your mouth.",
         linger: "I’m back"
       },
       {
-        line: "I took a bath too long.",
-        beat: "The mirror’s still a little fogged if you want proof. Hair damp. She didn’t bother with it.",
-        reply: "Come here. You don’t have to say where you were.",
+        line: "Bath ran long. I’m still dripping.",
+        beat: "Towel around her hips, tits out, hair wet down her back. Mirror fogged. She didn’t dry between her legs on purpose.",
+        reply: "You can spread me on the towel. I left it messy for you.",
         linger: "knock"
       },
       {
-        line: "A record’s been on the runout for an hour.",
-        beat: "She left it. Soft click, soft click. The room kept time without you.",
-        reply: "I almost texted. Then I figured you’d knock when you knocked.",
+        line: "I came once already. It wasn’t enough.",
+        beat: "Vibrator on the nightstand, still warm. She’s flushed down her chest, pussy obviously used, not embarrassed.",
+        reply: "I want your cock now. Fingers if you’re shy. I’m not.",
         linger: "I’m here"
       },
       {
-        line: "Fire escape. One cigarette I didn’t finish.",
-        beat: "The city did the talking. She saved you the ashtray and the cooler air.",
-        reply: "Sit with me. I saved you the quiet part.",
+        line: "Fire escape. I smoked with my tits in the wind.",
+        beat: "Jacket open. She doesn’t close it when you come in. City noise, tight nipples, ashtray saved.",
+        reply: "Hands on them. Then we can talk. Or not.",
         linger: "linger"
       },
       {
-        line: "I ate standing up in the kitchen light.",
-        beat: "Something with too much pepper. She left a bowl in the sink like a breadcrumb, not a test.",
-        reply: "There’s more if you’re hungry. I’m not keeping score.",
+        line: "I cooked in underwear. They got soaked.",
+        beat: "Kitchen light, ass against the counter, a thumb-sized wet spot she doesn’t hide.",
+        reply: "Take them off me. I kept thinking about you eating me out standing up.",
         linger: "I’m back"
       }
     ],
     overnight: [
       {
-        line: "I slept diagonal.",
-        beat: "The other side of the bed stayed a rumor. Morning is thin. She’s not cold. She’s just already awake.",
-        reply: "Coffee’s on. It’s not very good. I still made extra.",
+        line: "I slept naked. The sheet’s still kicked off my ass.",
+        beat: "Morning is thin. Tits to the side, one nipple in the light. She’s awake, not cold, not keeping score.",
+        reply: "Get in. I want your cock against me before coffee.",
         linger: "morning"
       },
       {
-        line: "I went out. Came home early anyway.",
-        beat: "Earrings on the table — one standing, one down. People who talk too much. Her own night, spent.",
-        reply: "Don’t look guilty. I had a night. You had a night. Now there’s this.",
+        line: "I went out. Came home and fucked myself thinking about you anyway.",
+        beat: "Dress on the chair. Her own night, spent. Fingers smell like her cunt and she doesn’t wash them first.",
+        reply: "Don’t look guilty. I had a night. Now I want you in my mouth.",
         linger: "I’m home"
       },
       {
-        line: "Rain started around two.",
-        beat: "She watched it until it got boring, which took a while. Yesterday’s shirt. Window open. Lamp still on like she forgot.",
-        reply: "You’re walking into leftover heat. That’s allowed.",
+        line: "Rain at two. I got off to it.",
+        beat: "Window open, yesterday’s shirt, no underwear. She’s sticky and unbothered. Lamp still on like she forgot.",
+        reply: "You’re walking into leftover heat. Put your tongue on my clit if you want the rest.",
         linger: "hey"
       },
       {
-        line: "I dreamed something I won’t tell you yet.",
-        beat: "Not a punishment. A private thing, still warm, not for the doorway. She’s in the kitchen light.",
-        reply: "Later, maybe. Right now I just want you in the room.",
+        line: "I dreamed your cock and I woke up wet.",
+        beat: "Not a punishment. A private thing, still warm. She’s in the kitchen light with her hand down her shorts.",
+        reply: "Later I’ll tell you the filthy part. Right now I want you to finish it.",
         linger: "I’m here"
       },
       {
-        line: "The night happened without an audience.",
-        beat: "She had one. Different temperature. Cooler air, same lamp, no ledger by the door.",
-        reply: "Come in. I’m glad it was you who knocked.",
+        line: "The night happened. I didn’t save it for you.",
+        beat: "Different temperature. Cooler air, same tits in the same lamp, no ledger by the door. She’s still glad it was you who knocked.",
+        reply: "Come in. Kiss my neck and grab my ass. That’s the whole welcome.",
         linger: "I’m home"
       }
     ],
     days: [
       {
-        line: "The basil on the sill gave up.",
-        beat: "She bought a stubborn little succulent instead. Life, unceremonious. She’s glad you exist in it again.",
-        reply: "Look, it doesn’t need you either. I still like having you anyway.",
+        line: "I didn’t wait with my legs open. I also didn’t put a bra on.",
+        beat: "Life went on. New plant, old lamp. Tits easy under the shirt. She’s glad you exist in it again.",
+        reply: "Come here. Mouth on them, then we can be people.",
         linger: "it’s me"
       },
       {
-        line: "I finished that book. The ending was mean.",
-        beat: "It’s on the arm of the couch, marked with a receipt. She thinks you’d like it. No recap required.",
-        reply: "You can borrow it. Or just sit. Both are a kind of reading.",
+        line: "I finished that book and then I got myself off.",
+        beat: "Book on the couch, receipt for a bookmark. She’s not recapping. She’s still a little swollen.",
+        reply: "Sit. I’ll put your hand on my pussy while I tell you the mean ending.",
         linger: "hey"
       },
       {
-        line: "Thursday I almost called. Friday I didn’t.",
-        beat: "Today you’re just here. She made soup. There’s extra. Nobody is owed an apology for time.",
-        reply: "Take a bowl. I kept the lamp on out of habit, not as a scoreboard.",
+        line: "Thursday I almost sent a picture of my tits. Friday I didn’t.",
+        beat: "Today you’re just here. Soup on the stove. Extra bowl. Nobody is owed an apology for time.",
+        reply: "You can have the soup. You can have my mouth. I’m not keeping a streak.",
         linger: "I’m here"
       },
       {
-        line: "The super finally fixed the buzzer.",
-        beat: "She missed the old one a little. New sound, same door. Life continued in its small renovations.",
-        reply: "You’re late in the way weather is late. Come in.",
+        line: "I dated the week a little. Came home to my own fingers.",
+        beat: "Not a test. Her body kept going. She’s in a big shirt and nothing else, cunt the point of the room without a billboard.",
+        reply: "If you want me, say it with your cock. I missed that more than the texts.",
         linger: "it’s me"
       },
       {
-        line: "I went to the river. I didn’t take a picture.",
-        beat: "Sketchy light. She wanted the evening to belong to her. It did. Now there’s this, which is different, not lesser.",
-        reply: "Tell me something small. I’ve got room for small.",
+        line: "I went to the river. Thought about you eating me out on the rocks. Didn’t.",
+        beat: "The evening belonged to her. It did. Now you’re in the doorway and she’s already wet from remembering.",
+        reply: "Do it here. Slow. I’ve got time if you do.",
         linger: "linger"
       }
     ]
